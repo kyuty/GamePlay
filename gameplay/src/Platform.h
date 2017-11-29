@@ -18,6 +18,10 @@ class Game;
  * Defines a platform abstraction.
  *
  * This class has only a few public methods for creating a platform
+ *
+ * 定义平台抽象类
+ *
+ * 为创建平台，提供少量公共方法
  */
 class Platform
 {
@@ -36,6 +40,8 @@ public:
     /**
      * Creates a platform for the specified game which it will interact with.
      *
+     * 创建 与特殊的Game类相互作用的 platform类
+     *
      * @param game The game to create a platform for.
      *
      * @return The created platform interface.
@@ -52,6 +58,16 @@ public:
      * If a attachToWindow is passed to Platform::create the message pump will instead attach
      * to or allow the attachToWindow to drive the game loop on the platform.
      *
+     * 开始处理平台信息
+     *
+     * 该方法处理所有系统窗口消息，并且驱动game循环
+     * 一般情况下它是不返回的，除非应用程序关闭
+     *
+     * 如果attachToWindow被传递给Platform::create，消息循环机将会附加或允许attachToWindow方法去驱动
+     * 游戏循环
+     *
+     * pump 泵，抽水机，程序不断循环
+     *
      * @return The platform message pump return code.
      */
     int enterMessagePump();
@@ -67,6 +83,8 @@ private:
      * This method informs the platform that the game is shutting down
      * and anything platform specific should be shutdown as well or halted
      * This function is called automatically when the game shutdown function is called
+     *
+     * as well or : 或者
      */
     static void signalShutdown();
 
