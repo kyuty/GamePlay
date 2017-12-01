@@ -84,6 +84,11 @@ private:
      * and anything platform specific should be shutdown as well or halted
      * This function is called automatically when the game shutdown function is called
      *
+     * 该方法通知平台，游戏正在关闭
+     * 以及任何特定平台应该关闭或停止
+     *
+     * 当游戏调用关闭方法时，这个方法会自动被调用
+     *
      * as well or : 或者
      */
     static void signalShutdown();
@@ -91,6 +96,9 @@ private:
     /**
      * Indicates whether a programmatic exit is allowed on this platform.
      * Some platforms (eg. iOS) do not allow apps to exit programmatically.
+     *
+     * 表示在此平台是否允许程序退出
+     * 一些平台，如iOS，不允许应用程序以编程的方式退出
      *
      * @return whether a programmatic exit is allowed on this platform.
      */
@@ -113,12 +121,16 @@ private:
     /**
      * Gets the absolute platform time starting from when the message pump was started.
      *
+     * 从消息循环开始计，获取平台绝对时间
+     *
      * @return The absolute platform time. (in milliseconds)
      */
     static double getAbsoluteTime();
 
     /**
      * Sets the absolute platform time since the start of the message pump.
+     *
+     * 虽然消息循环已经开始，但依旧可以设置平台的绝对时间
      *
      * @param time The time to set (in milliseconds).
      */
@@ -141,6 +153,8 @@ private:
     /**
      * Sleeps synchronously for the given amount of time (in milliseconds).
      *
+     * ms毫秒休眠(同步，非异步)
+     *
      * @param ms How long to sleep (in milliseconds).
      */
     static void sleep(long ms);
@@ -148,12 +162,17 @@ private:
     /**
      * Set if multi-sampling is enabled on the platform.
      *
+     * multi-sampling : 多点采样
+     *
      * @param enabled true sets multi-sampling to be enabled, false to be disabled.
      */
     static void setMultiSampling(bool enabled);
 
    /**
     * Is multi-sampling mode enabled.
+    *
+    * multi-sampling : 多点采样
+    *
     */
     static bool isMultiSampling();
 
@@ -172,11 +191,15 @@ private:
 
     /**
      * Whether the platform has mouse support.
+     *
+     * 是否有鼠标
      */
     static bool hasMouse();
 
     /**
      * Enables or disabled mouse capture.
+     *
+     * 开启或关闭鼠标捕捉
      *
      * When mouse capture is enabled, the platform cursor is hidden
      * and mouse event points are delivered as position deltas instead
@@ -186,8 +209,16 @@ private:
      * movement, such as when implementing free/mouse look in an FPS
      * game.
      *
+     * 当开启鼠标捕捉，平台光标被隐藏。
+     * 鼠标事件点将作为位置增量而不是绝对位置来传递。
+     *
+     * 这对希望提供不受限制的鼠标游戏很有用，
+     * 比如说在FPS游戏通过鼠标实现自由视角
+     *
      * Disabling mouse capture moves the mouse back to the center of the
      * screen and shows the platform cursor.
+     *
+     * 关闭鼠标捕捉，平台光标显示，将鼠标位置移动到屏幕中心
      *
      * Note that this method does nothing on platforms that do not
      * support a mouse.
@@ -203,6 +234,8 @@ private:
 
     /**
      * Sets the visibility of the platform cursor.
+     *
+     * 设置是否显示鼠标光标
      *
      * On platforms that support a visible cursor, this method
      * toggles the visibility of the cursor.
@@ -220,6 +253,8 @@ private:
 
     /**
      * Whether the platform has accelerometer support.
+     *
+     * 是否有加速计
      */
     static bool hasAccelerometer();
 
@@ -252,6 +287,9 @@ private:
     /**
      * Gets the command line arguments.
      *
+     * 获取命令行的参数
+     * 在Linux和Windows平台生效，Android不生效
+     *
      * @param argc The number of command line arguments.
      * @param argv The array of command line arguments.
      */
@@ -260,12 +298,16 @@ private:
     /**
      * Shows or hides the virtual keyboard (if supported).
      *
+     * 是否显示垂直键盘
+     *
      * @param display true when virtual keyboard needs to be displayed and false otherwise.
      */
     static void displayKeyboard(bool display);
 
     /**
      * Tests if the specified gesture is supported on the platform.
+     *
+     * 测试这个特殊的手势是否在当前平台支持
      *
      * @return true if it is supported; false if not supported.
      */
