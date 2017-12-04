@@ -1,6 +1,6 @@
 // Core
-#include "Base.h"
-#include "Platform.h"
+#include "core/Base.h"
+#include "core/Platform.h"
 #include "Game.h"
 #include "Keyboard.h"
 #include "Mouse.h"

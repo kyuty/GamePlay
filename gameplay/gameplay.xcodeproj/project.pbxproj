@@ -432,8 +432,6 @@
 		42CC59671809A4EF00AAD8AD /* PhysicsVehicleWheel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC55031809A4ED00AAD8AD /* PhysicsVehicleWheel.cpp */; };
 		42CC596A1809A4EF00AAD8AD /* Plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC55051809A4ED00AAD8AD /* Plane.cpp */; };
 		42CC596B1809A4EF00AAD8AD /* Plane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC55051809A4ED00AAD8AD /* Plane.cpp */; };
-		42CC596E1809A4EF00AAD8AD /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC55081809A4ED00AAD8AD /* Platform.cpp */; };
-		42CC596F1809A4EF00AAD8AD /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC55081809A4ED00AAD8AD /* Platform.cpp */; };
 		42CC59721809A4EF00AAD8AD /* PlatformAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC550A1809A4ED00AAD8AD /* PlatformAndroid.cpp */; };
 		42CC59731809A4EF00AAD8AD /* PlatformAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC550A1809A4ED00AAD8AD /* PlatformAndroid.cpp */; };
 		42CC59771809A4EF00AAD8AD /* PlatformiOS.mm in Sources */ = {isa = PBXBuildFile; fileRef = 42CC550C1809A4ED00AAD8AD /* PlatformiOS.mm */; };
@@ -510,6 +508,7 @@
 		5B2BC7621512514D00D176CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2BC7611512514D00D176CD /* QuartzCore.framework */; };
 		6290E04A18223DCC00A28FB9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6290E04918223DCC00A28FB9 /* GameKit.framework */; };
 		6290E04C18223DDD00A28FB9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6290E04B18223DDD00A28FB9 /* GameKit.framework */; };
+		7EEA7B621FD599B800A9922C /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7EEA7B611FD599B800A9922C /* Platform.cpp */; };
 		BD2636E516CF5B7400CFE15F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2636DF16CF5B7400CFE15F /* CoreMotion.framework */; };
 		BD2636E616CF5B7400CFE15F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2636E016CF5B7400CFE15F /* Foundation.framework */; };
 		BD2636E716CF5B7400CFE15F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2636E116CF5B7400CFE15F /* OpenAL.framework */; };
@@ -829,7 +828,6 @@
 		42CC53121809A4EB00AAD8AD /* AudioListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioListener.h; path = src/AudioListener.h; sourceTree = SOURCE_ROOT; };
 		42CC53131809A4EB00AAD8AD /* AudioSource.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AudioSource.cpp; path = src/AudioSource.cpp; sourceTree = SOURCE_ROOT; };
 		42CC53141809A4EB00AAD8AD /* AudioSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AudioSource.h; path = src/AudioSource.h; sourceTree = SOURCE_ROOT; };
-		42CC53151809A4EB00AAD8AD /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Base.h; path = src/Base.h; sourceTree = SOURCE_ROOT; };
 		42CC53161809A4EB00AAD8AD /* BoundingBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BoundingBox.cpp; path = src/BoundingBox.cpp; sourceTree = SOURCE_ROOT; };
 		42CC53171809A4EB00AAD8AD /* BoundingBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoundingBox.h; path = src/BoundingBox.h; sourceTree = SOURCE_ROOT; };
 		42CC53181809A4EB00AAD8AD /* BoundingBox.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BoundingBox.inl; path = src/BoundingBox.inl; sourceTree = SOURCE_ROOT; };
@@ -963,8 +961,6 @@
 		42CC55051809A4ED00AAD8AD /* Plane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Plane.cpp; path = src/Plane.cpp; sourceTree = SOURCE_ROOT; };
 		42CC55061809A4ED00AAD8AD /* Plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Plane.h; path = src/Plane.h; sourceTree = SOURCE_ROOT; };
 		42CC55071809A4ED00AAD8AD /* Plane.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Plane.inl; path = src/Plane.inl; sourceTree = SOURCE_ROOT; };
-		42CC55081809A4ED00AAD8AD /* Platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Platform.cpp; path = src/Platform.cpp; sourceTree = SOURCE_ROOT; };
-		42CC55091809A4ED00AAD8AD /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Platform.h; path = src/Platform.h; sourceTree = SOURCE_ROOT; };
 		42CC550A1809A4ED00AAD8AD /* PlatformAndroid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformAndroid.cpp; path = src/PlatformAndroid.cpp; sourceTree = SOURCE_ROOT; };
 		42CC550C1809A4ED00AAD8AD /* PlatformiOS.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = PlatformiOS.mm; path = src/PlatformiOS.mm; sourceTree = SOURCE_ROOT; };
 		42CC550D1809A4ED00AAD8AD /* PlatformLinux.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlatformLinux.cpp; path = src/PlatformLinux.cpp; sourceTree = SOURCE_ROOT; };
@@ -1050,6 +1046,8 @@
 		6290E04918223DCC00A28FB9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		6290E04B18223DDD00A28FB9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		7E32000E1FC8764B00DDAF4C /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
+		7EEA7B5F1FD5980100A9922C /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
+		7EEA7B611FD599B800A9922C /* Platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Platform.cpp; sourceTree = "<group>"; };
 		BD2636DF16CF5B7400CFE15F /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		BD2636E016CF5B7400CFE15F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		BD2636E116CF5B7400CFE15F /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/OpenAL.framework; sourceTree = DEVELOPER_DIR; };
@@ -1421,7 +1419,6 @@
 				42CC53121809A4EB00AAD8AD /* AudioListener.h */,
 				42CC53131809A4EB00AAD8AD /* AudioSource.cpp */,
 				42CC53141809A4EB00AAD8AD /* AudioSource.h */,
-				42CC53151809A4EB00AAD8AD /* Base.h */,
 				42CC53161809A4EB00AAD8AD /* BoundingBox.cpp */,
 				42CC53171809A4EB00AAD8AD /* BoundingBox.h */,
 				42CC53181809A4EB00AAD8AD /* BoundingBox.inl */,
@@ -1561,8 +1558,6 @@
 				42CC55051809A4ED00AAD8AD /* Plane.cpp */,
 				42CC55061809A4ED00AAD8AD /* Plane.h */,
 				42CC55071809A4ED00AAD8AD /* Plane.inl */,
-				42CC55081809A4ED00AAD8AD /* Platform.cpp */,
-				42CC55091809A4ED00AAD8AD /* Platform.h */,
 				42CC550A1809A4ED00AAD8AD /* PlatformAndroid.cpp */,
 				42CC550C1809A4ED00AAD8AD /* PlatformiOS.mm */,
 				42CC550D1809A4ED00AAD8AD /* PlatformLinux.cpp */,
@@ -1687,6 +1682,8 @@
 		7E32000D1FC8764B00DDAF4C /* core */ = {
 			isa = PBXGroup;
 			children = (
+				7EEA7B611FD599B800A9922C /* Platform.cpp */,
+				7EEA7B5F1FD5980100A9922C /* Platform.h */,
 				7E32000E1FC8764B00DDAF4C /* Base.h */,
 			);
 			name = core;
@@ -1762,7 +1759,6 @@
 				424F33A61A60C28600395438 /* lua_PhysicsRigidBodyParameters.cpp in Sources */,
 				42CC59861809A4EF00AAD8AD /* RadioButton.cpp in Sources */,
 				424F330A1A60C28600395438 /* lua_AIState.cpp in Sources */,
-				42CC596E1809A4EF00AAD8AD /* Platform.cpp in Sources */,
 				424F331C1A60C28600395438 /* lua_AnimationValue.cpp in Sources */,
 				424F338E1A60C28600395438 /* lua_PhysicsCollisionShape.cpp in Sources */,
 				424F33FE1A60C28600395438 /* lua_Vector2.cpp in Sources */,
@@ -1843,6 +1839,7 @@
 				424F33561A60C28600395438 /* lua_HeightField.cpp in Sources */,
 				42CC59821809A4EF00AAD8AD /* Quaternion.cpp in Sources */,
 				42CC59E01809A4EF00AAD8AD /* SpriteBatch.cpp in Sources */,
+				7EEA7B621FD599B800A9922C /* Platform.cpp in Sources */,
 				42CC59521809A4EF00AAD8AD /* PhysicsHingeConstraint.cpp in Sources */,
 				424F33861A60C28600395438 /* lua_PhysicsCharacter.cpp in Sources */,
 				424F335C1A60C28600395438 /* lua_Joint.cpp in Sources */,
@@ -2018,7 +2015,6 @@
 				424F33A71A60C28600395438 /* lua_PhysicsRigidBodyParameters.cpp in Sources */,
 				42CC59871809A4EF00AAD8AD /* RadioButton.cpp in Sources */,
 				424F330B1A60C28600395438 /* lua_AIState.cpp in Sources */,
-				42CC596F1809A4EF00AAD8AD /* Platform.cpp in Sources */,
 				424F331D1A60C28600395438 /* lua_AnimationValue.cpp in Sources */,
 				424F338F1A60C28600395438 /* lua_PhysicsCollisionShape.cpp in Sources */,
 				424F33FF1A60C28600395438 /* lua_Vector2.cpp in Sources */,
