@@ -26,6 +26,10 @@ class ScriptController;
  * This represents a running cross-platform game application and provides an abstraction
  * to most typical platform functionality and events.
  *
+ * 定义基类，为你的游戏拓展游戏初始化、游戏逻辑和平台代理拓展的基类
+ *
+ * 它表示正在运行的跨平台的游戏程序，并提供抽象最典型的平台方法和事件
+ *
  * @see http://gameplay3d.github.io/GamePlay/docs/file-formats.html#wiki-Game_Config
  */
 class Game
@@ -35,7 +39,7 @@ class Game
     friend class ShutdownListener;
 
 public:
-    
+
     /**
      * The game states.
      */
@@ -105,6 +109,11 @@ public:
      * This includes things such as game physics and animation.
      * 
      * @return The total game time (in milliseconds).
+     *
+     * 获取总游戏时间(以毫秒为单位). 这是总累计游戏时间(未暂停).
+     *
+     * 您通常会在游戏暂停时使用你想你想要停止的事情.
+     * 这包括诸如游戏物理和动画之类的事情.
      */
     static double getGameTime();
 
@@ -159,6 +168,8 @@ public:
      *
      * This is called every frame from the platform.
      * This in turn calls back on the user implemented game methods: update() then render()
+     *
+     * 它会回调用户实现的update和render方法
      */
     void frame();
 
@@ -182,7 +193,7 @@ public:
      * @return The game window height.
      */
     inline unsigned int getHeight() const;
-    
+
     /**
      * Gets the aspect ratio of the window. (width / height)
      * 
@@ -210,8 +221,8 @@ public:
      * Clears the specified resource buffers to the specified clear values. 
      *
      * @param flags The flags indicating which buffers to be cleared.
-     * @param clearColor The color value to clear to when the flags includes the color buffer.
-     * @param clearDepth The depth value to clear to when the flags includes the color buffer.
+     * @param clearColor   The color value to clear to when the flags includes the color buffer.
+     * @param clearDepth   The depth value to clear to when the flags includes the color buffer.
      * @param clearStencil The stencil value to clear to when the flags includes the color buffer.
      */
     void clear(ClearFlags flags, const Vector4& clearColor, float clearDepth, int clearStencil);
@@ -253,7 +264,7 @@ public:
      */
     inline PhysicsController* getPhysicsController() const;
 
-    /** 
+    /**
      * Gets the AI controller for managing control of artificial
      * intelligence associated with the game.
      *
@@ -275,14 +286,16 @@ public:
      * @return The audio listener for this game.
      */
     AudioListener* getAudioListener();
-    
+
     /**
      * Shows or hides the virtual keyboard (if supported).
      *
      * @param display true when virtual keyboard needs to be displayed; false otherwise.
+     *
+     * display虚拟键盘
      */
      inline void displayKeyboard(bool display);
-     
+
     /**
      * Keyboard callback on keyPress events.
      *
@@ -303,6 +316,8 @@ public:
      * @param y The y position of the touch in pixels. Top edge is zero.
      * @param contactIndex The order of occurrence for multiple touch contacts starting at zero.
      *
+     * contactIndex 触点索引
+     *
      * @see Touch::TouchEvent
      */
     virtual void touchEvent(Touch::TouchEvent evt, int x, int y, unsigned int contactIndex);
@@ -316,17 +331,22 @@ public:
      * @param y The y position of the mouse in pixels. Top edge is zero.
      * @param wheelDelta The number of mouse wheel ticks. Positive is up (forward), negative is down (backward).
      *
+     * 滚轮 向上滑是正数 向下滑是负数
+     *
      * @return True if the mouse event is consumed or false if it is not consumed.
      *
      * @see Mouse::MouseEvent
      */
     virtual bool mouseEvent(Mouse::MouseEvent evt, int x, int y, int wheelDelta);
-    
+
     /**
      * Called when the game window has been resized.
      *
      * This method is called once the game window is created with its initial size
      * and then again any time the game window changes size.
+     *
+     * 一旦游戏窗口被初始化创建，该方法就会被调到
+     * 然后再次改变窗口大小
      *
      * @param width The new game window width.
      * @param height The new game window height.
@@ -339,14 +359,14 @@ public:
      * @return true if a mouse is supported, false otherwise.
      */
     inline bool hasMouse();
-    
+
     /**
      * Gets whether mouse input is currently captured.
      *
      * @return is the mouse captured.
      */
     inline bool isMouseCaptured();
-    
+
     /**
      * Enables or disables mouse capture.
      *
@@ -359,14 +379,14 @@ public:
      * @param captured true to enable mouse capture mode, false to disable it.
      */
     inline void setMouseCaptured(bool captured);
-    
+
     /**
      * Sets the visibility of the platform cursor.
      *
      * @param visible true to show the platform cursor, false to hide it.
      */
     inline void setCursorVisible(bool visible);
-    
+
     /**
      * Determines whether the platform cursor is currently visible.
      *
@@ -437,6 +457,8 @@ public:
      * @param x The centroid x-coordinate of the pinch.
      * @param y The centroid y-coordinate of the pinch.
      * @param scale The scale of the pinch.
+     *
+     * centroid 矩心
      */
     virtual void gesturePinchEvent(int x, int y, float scale);
 
@@ -446,6 +468,8 @@ public:
      * @param x The x-coordinate of the long tap.
      * @param y The y-coordinate of the long tap.
      * @param duration The duration of the long tap in ms.
+     *
+     * long tap 长按
      */
     virtual void gestureLongTapEvent(int x, int y, float duration);
 
@@ -584,11 +608,19 @@ public:
     /**
      * Schedules a time event to be sent to the given TimeListener a given number of game milliseconds from now.
      * Game time stops while the game is paused. A time offset of zero will fire the time event in the next frame.
-     * 
+     *
+     * 计划一个时间事件，该事件被发送到TimeListener，时间计数于此时此刻
+     * 游戏暂停时，time停止
+     * 如果timeOffset为0则表示在下一帧触发时间事件
+     *
      * @param timeOffset The number of game milliseconds in the future to schedule the event to be fired.
      * @param timeListener The TimeListener that will receive the event.
      * @param cookie The cookie data that the time event will contain.
      * @script{ignore}
+     *
+     * timeOffset未来计划要触发的事件的游戏毫秒数
+     * timeListener将接收事件的TimeListener
+     * cookie时间事件将包含的cookie数据
      */
     void schedule(float timeOffset, TimeListener* timeListener, void* cookie = 0);
 
@@ -599,7 +631,10 @@ public:
      * The given script function must take a single floating point number, which is the difference between the
      * current game time and the target time (see TimeListener::timeEvent). The function will be executed
      * in the context of the script envionrment that the schedule function was called from.
-     * 
+     *
+     * 给定的脚本函数必须采用单个浮点数，这是当前游戏时间与目标时间之间的差异(请参阅TimeListener :: timeEvent)
+     * 该函数将在调用schedule函数的脚本环境的上下文中执行
+     *
      * @param timeOffset The number of game milliseconds in the future to schedule the event to be fired.
      * @param function The script function that will receive the event.
      */
@@ -637,6 +672,11 @@ protected:
      * Called just before render, once per frame when game is running.
      * Ideal for non-render code and game logic such as input and animation.
      *
+     * 更新回调，为了处理更新例程
+     *
+     * 在渲染之前调用，在游戏运行时的每帧会调用一次
+     * 非常适合非呈现代码和游戏逻辑，如输入和动画
+     *
      * @param elapsedTime The elapsed game time.
      */
     virtual void update(float elapsedTime);
@@ -646,6 +686,11 @@ protected:
      *
      * Called just after update, once per frame when game is running.
      * Ideal for all rendering code.
+     *
+     * 渲染回调，处理渲染例程
+     *
+     * 在update函数之后会被调用，在游戏运行时的每帧会调用一次
+     * 非常适合执行渲染code
      *
      * @param elapsedTime The elapsed game time.
      */

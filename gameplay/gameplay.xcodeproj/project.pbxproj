@@ -350,7 +350,6 @@
 		42CC55EB1809A4EF00AAD8AD /* FrameBuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC53381809A4EB00AAD8AD /* FrameBuffer.cpp */; };
 		42CC55EE1809A4EF00AAD8AD /* Frustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC533A1809A4EB00AAD8AD /* Frustum.cpp */; };
 		42CC55EF1809A4EF00AAD8AD /* Frustum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC533A1809A4EB00AAD8AD /* Frustum.cpp */; };
-		42CC55F21809A4EF00AAD8AD /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC533C1809A4EB00AAD8AD /* Game.cpp */; };
 		42CC55F31809A4EF00AAD8AD /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC533C1809A4EB00AAD8AD /* Game.cpp */; };
 		42CC55F61809A4EF00AAD8AD /* Gamepad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC533F1809A4EB00AAD8AD /* Gamepad.cpp */; };
 		42CC55F71809A4EF00AAD8AD /* Gamepad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 42CC533F1809A4EB00AAD8AD /* Gamepad.cpp */; };
@@ -508,6 +507,7 @@
 		5B2BC7621512514D00D176CD /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B2BC7611512514D00D176CD /* QuartzCore.framework */; };
 		6290E04A18223DCC00A28FB9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6290E04918223DCC00A28FB9 /* GameKit.framework */; };
 		6290E04C18223DDD00A28FB9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6290E04B18223DDD00A28FB9 /* GameKit.framework */; };
+		7E2BB9B01FFFC916006B9A6E /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7E2BB9AD1FFFC916006B9A6E /* Game.cpp */; };
 		7EEA7B621FD599B800A9922C /* Platform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7EEA7B611FD599B800A9922C /* Platform.cpp */; };
 		BD2636E516CF5B7400CFE15F /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2636DF16CF5B7400CFE15F /* CoreMotion.framework */; };
 		BD2636E616CF5B7400CFE15F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD2636E016CF5B7400CFE15F /* Foundation.framework */; };
@@ -1045,6 +1045,9 @@
 		5BC4E7D4150F8C3C00CBE1C0 /* res */ = {isa = PBXFileReference; lastKnownFileType = folder; path = res; sourceTree = "<group>"; };
 		6290E04918223DCC00A28FB9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		6290E04B18223DDD00A28FB9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		7E2BB9AD1FFFC916006B9A6E /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		7E2BB9AE1FFFC916006B9A6E /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		7E2BB9AF1FFFC916006B9A6E /* Game.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Game.inl; sourceTree = "<group>"; };
 		7E32000E1FC8764B00DDAF4C /* Base.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base.h; sourceTree = "<group>"; };
 		7EEA7B5F1FD5980100A9922C /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
 		7EEA7B611FD599B800A9922C /* Platform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Platform.cpp; sourceTree = "<group>"; };
@@ -1682,6 +1685,9 @@
 		7E32000D1FC8764B00DDAF4C /* core */ = {
 			isa = PBXGroup;
 			children = (
+				7E2BB9AD1FFFC916006B9A6E /* Game.cpp */,
+				7E2BB9AE1FFFC916006B9A6E /* Game.h */,
+				7E2BB9AF1FFFC916006B9A6E /* Game.inl */,
 				7EEA7B611FD599B800A9922C /* Platform.cpp */,
 				7EEA7B5F1FD5980100A9922C /* Platform.h */,
 				7E32000E1FC8764B00DDAF4C /* Base.h */,
@@ -1915,6 +1921,7 @@
 				424F33DA1A60C28600395438 /* lua_SpriteBatchSpriteVertex.cpp in Sources */,
 				42CC55D21809A4EF00AAD8AD /* DepthStencilTarget.cpp in Sources */,
 				42CC55B61809A4EF00AAD8AD /* Button.cpp in Sources */,
+				7E2BB9B01FFFC916006B9A6E /* Game.cpp in Sources */,
 				424F335E1A60C28600395438 /* lua_JoystickControl.cpp in Sources */,
 				42CC596A1809A4EF00AAD8AD /* Plane.cpp in Sources */,
 				424F33A21A60C28600395438 /* lua_PhysicsHingeConstraint.cpp in Sources */,
@@ -1990,7 +1997,6 @@
 				424F33161A60C28600395438 /* lua_AnimationClipListener.cpp in Sources */,
 				424F33F41A60C28600395438 /* lua_TileSet.cpp in Sources */,
 				424F33721A60C28600395438 /* lua_Mesh.cpp in Sources */,
-				42CC55F21809A4EF00AAD8AD /* Game.cpp in Sources */,
 				42CC59101809A4EF00AAD8AD /* Mesh.cpp in Sources */,
 				424F33E21A60C28600395438 /* lua_Text.cpp in Sources */,
 				42CC55DA1809A4EF00AAD8AD /* FileSystem.cpp in Sources */,
